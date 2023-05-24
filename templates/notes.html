@@ -1,0 +1,38 @@
+{{template "Layout2" .}}
+<main class="container-fluid py-5 text-center">
+    <header>
+        <form action="/notes" method="post">
+        <div class="mb-3">
+        <label for="heading" class="form-label mx-auto w-auto">Heading</label>
+        <input type="text" class="form-control mx-auto w-auto" name="heading" placeholder="Title">
+      </div>
+      <div class="mb-3">
+        <label for="note" class="form-label mx-auto w-auto">Note's text area</label>
+        <textarea class="form-control mx-auto w-auto-lg" name="note" rows="3"></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Add a note</button></form>
+    </header>
+
+    <main>
+        <p></p>
+    
+        {{range .Notes}}
+        <figure class="text-start"> <p class="h3"> {{ .Heading }} </p>
+        <p> {{ .Note }}</p>
+        <figcaption class="blockquote-footer">
+            Date: <cite title="date">{{ .CreatedAt }}</cite>
+          </figcaption></figure>
+          <form action="/deleteNote" method="post">
+            <div class="mb-3">
+              <select class="form-select" name="heading" aria-label="Delete this note">
+                <option selected>{{ .Heading }}</option></select>
+                <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
+        </div>
+        {{end}}
+    </main>
+</main>
+
+</body>
+
+</html>

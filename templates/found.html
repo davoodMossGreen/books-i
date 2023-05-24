@@ -1,0 +1,31 @@
+{{template "Layout2" .}}
+<main class="container-fluid py-5 text-center">
+    
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Username</th>
+            <th class="text-start">Email</th>
+            <th class="text-start">User type</th>
+            <th class="text-start">Created at</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range .Users}}
+        <tr>
+            
+            <td class="text-start">{{ .Username }}</td>
+            <td class="text-start">{{ .Email }}</td>
+            <td class="text-start">{{ .User_type }}</td>
+            <td class="text-start">{{ .CreatedAt }}</td>
+        </tr>
+        {{end}}
+</tbody>
+</table>
+
+
+</main>
+
+</body>
+
+</html>

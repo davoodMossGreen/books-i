@@ -1,0 +1,31 @@
+{{template "Layout2" .}}
+<main class="container-fluid py-5 text-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Author</th>
+                <th class="text-start">Title</th>
+                <th class="text-start">Publication</th>
+                <th class="text-start">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Books}}
+            <tr>
+
+                <td class="text-start">{{ .Author }}</td>
+                <td class="text-start">{{ .Name}}</td>
+                <td class="text-start">{{ .Publication }}</td>
+                <td class="text-start">{{ .CreatedAt }}</td>
+            </tr>
+            {{end}}
+    </tbody>
+    </table>
+    <footer class="mb-5 small text-center text-muted">
+        <a href="/deleteAccount" class="btn btn-outline-danger">Delete account</button></a>
+    </footer>
+</main>
+
+</body>
+
+</html>

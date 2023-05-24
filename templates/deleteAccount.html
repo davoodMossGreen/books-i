@@ -1,0 +1,12 @@
+{{template "Layout" .}}
+<main class="container-fluid py-5 text-center">
+    <h3 class="text-dark"> Are you sure you want to delete your account?</h3>
+    <form action="/deleteAccount" method="post">
+        <button class="btn btn-danger" name="Yes" value="yes">Yes</button>
+        <button class="btn btn-success" name="No" value="no">No</button>
+    </form>
+</main>
+
+</body>
+
+</html>

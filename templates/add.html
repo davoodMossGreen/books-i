@@ -1,0 +1,22 @@
+{{template "Layout" .}}
+<main class="container-fluid py-5 text-center">
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="author" placeholder="Author" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="title" placeholder="Title" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="publication" placeholder="Year of publication" type="number" required>
+        </div>
+        <div class="mb-3">
+            <textarea autocomplete ="off" class="form-control mx-auto w-auto" rows="7" name="description" placeholder="Description" required></textarea>
+        </div>
+
+        <button class="btn btn-success" type="submit">Add</button>
+</main>
+
+</body>
+
+</html>
